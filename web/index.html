@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandelbulb — heyman.ai</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <canvas id="c"></canvas>
+    <div class="controls">
+        <div class="label">Power</div>
+        <input type="range" id="power" min="2" max="16" step="0.5" value="8">
+        <span class="val" id="power-val">8</span>
+
+        <div class="label">Max Steps</div>
+        <input type="range" id="steps" min="32" max="256" step="16" value="128">
+        <span class="val" id="steps-val">128</span>
+
+        <div class="label">Color Scheme</div>
+        <select id="palette">
+            <option value="0">Warm</option>
+            <option value="1">Cool</option>
+            <option value="2">Monochrome</option>
+            <option value="3">Neon</option>
+        </select>
+
+        <div class="btn-row">
+            <button id="reset">Reset View</button>
+            <button id="animate">Animate: OFF</button>
+        </div>
+        <div class="info">Drag to orbit. Scroll to zoom.</div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
